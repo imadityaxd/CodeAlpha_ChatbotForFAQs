@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Gemini Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-md space-y-4">
+
+    <h1 class="text-3xl font-bold text-center text-blue-700">🤖 Gemini Chatbot</h1>
+
+    <!-- Suggested Questions -->
+    <!-- Suggested FAQs -->
+<div>
+  <h2 class="text-md font-semibold text-gray-700 mb-2">💡 Frequently Asked Questions:</h2>
+  <div class="flex flex-wrap gap-2">
+    <button onclick="sendPrebuilt('What can you do?')" class="bg-gray-200 hover:bg-blue-100 text-sm px-3 py-1 rounded">What can you do?</button>
+    <button onclick="sendPrebuilt('How do I use this chatbot?')" class="bg-gray-200 hover:bg-blue-100 text-sm px-3 py-1 rounded">How to use</button>
+    <button onclick="sendPrebuilt('Can you help me with Python coding?')" class="bg-gray-200 hover:bg-blue-100 text-sm px-3 py-1 rounded">Python coding help</button>
+    <button onclick="sendPrebuilt('Do you remember previous conversations?')" class="bg-gray-200 hover:bg-blue-100 text-sm px-3 py-1 rounded">Memory?</button>
+    <button onclick="sendPrebuilt('Can you explain AI in simple terms?')" class="bg-gray-200 hover:bg-blue-100 text-sm px-3 py-1 rounded">Explain AI</button>
+    <button onclick="sendPrebuilt('Is your knowledge up to date?')" class="bg-gray-200 hover:bg-blue-100 text-sm px-3 py-1 rounded">Latest info?</button>
+    <button onclick="sendPrebuilt('Recommend some good programming resources.')" class="bg-gray-200 hover:bg-blue-100 text-sm px-3 py-1 rounded">Programming resources</button>
+    <button onclick="sendPrebuilt('Can you summarize a paragraph for me?')" class="bg-gray-200 hover:bg-blue-100 text-sm px-3 py-1 rounded">Summarize text</button>
+    <button onclick="sendPrebuilt('What is the difference between AI and Machine Learning?')" class="bg-gray-200 hover:bg-blue-100 text-sm px-3 py-1 rounded">AI vs ML</button>
+    <button onclick="sendPrebuilt('How do I deploy a Python app online?')" class="bg-gray-200 hover:bg-blue-100 text-sm px-3 py-1 rounded">Deploy Python app</button>
+  </div>
+</div>
+
+
+    <!-- Chat Box -->
+    <div id="chatBox" class="border p-4 h-80 overflow-y-auto bg-green-200 rounded text-sm space-y-2"></div>
+
+    <!-- Input Area -->
+    <div class="flex gap-2">
+      <input id="userInput" class="w-full p-2 border rounded" placeholder="Ask something..." />
+      <button onclick="sendMessage()" class="bg-blue-600 text-white px-4 py-2 rounded">Send</button>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
