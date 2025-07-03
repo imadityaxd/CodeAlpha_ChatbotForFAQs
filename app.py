@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 load_dotenv()
 
-GEMINI_API_KEY = os.getenv('GEMENI_API_KEY')
-# Configure your Gemini API key
+# Make sure the environment variable name is correct
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')  # corrected spelling from GEMENI
 genai.configure(api_key=GEMINI_API_KEY)
 
 model = genai.GenerativeModel("models/gemini-1.5-flash")
@@ -24,4 +24,5 @@ def chat():
     return jsonify({"response": response.text.strip()})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use Render's PORT environment variable
+    app.run(host="0.0.0.0", port=port)
